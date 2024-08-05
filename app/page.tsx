@@ -1,113 +1,184 @@
-import Image from "next/image";
+//components import
+import Button from "@/components/utils/Button";
+import MessageBox from "@/components/utils/MessageBox";
+
+//image & icon import
+import Girls from "@/asset/image/home/girls.svg"
+import Girls2 from "@/asset/image/home/girls2.svg" 
+import HeartIcon from '@/asset/icon-merrymatch/heartwhite.svg'
+import Send from '@/asset/icon-merrymatch/send.svg'
+import SendPink from '@/asset/icon-merrymatch/SendPink.svg'
+import ShieldDone from '@/asset/icon-merrymatch/ShieldDone.svg'
+import ShieldDonePink from '@/asset/icon-merrymatch/ShiedDonePink.svg'
+import Star from '@/asset/icon-merrymatch/Star.svg'
+import StarPink from '@/asset/icon-merrymatch/StartPink.svg'
+import ExProfile from '@/asset/icon-merrymatch/Rectangle 1.svg'
+import ExProfile2 from '@/asset/icon-merrymatch/Rectangle 2.svg'
+
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+      {/* Hero section */}
+      <section className="min-h-[758px] flex max-md:flex-col justify-center items-center bg-utils-BG text-white relative">
+        <div className="md:absolute relative md:top-[-90px] max-md:top-[-40px] right-[160px] max-md:scale-90 z-0">
+            <Girls/>
+            <div className="absolute bottom-14 right-[-50px]">
+              <MessageBox message="Hi! Nice to meet you" position="start"/>
+            </div>
         </div>
-      </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
+        <div className="w-[358px] flex flex-col gap-[60px] justify-between items-center">
+          <div>
+            <p className="text-Headline1 font-extrabold text-center" >
+              Make the first ‘Merry’
+            </p>
+            <p className="text-Body1 font-bold text-center">
+              If you feel lonely, let’s start meeting new people in your area! Don’t forget to get Merry with us
+            </p>
+          </div>
+          <div>
+            <Button label={'Start matching!'} disable={false}/>
+          </div>
+        </div>
+        <div className="md:absolute relative bottom-0 left-[160px] max-md:scale-90">
+          <Girls2/>
+          <div className="absolute top-14 left-[-50px]">
+            <span className="absolute w-[9px] h-[8px] top-3 left-1">
+              <HeartIcon/>
             </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+            <MessageBox message="Nice to meet you too!" position="end"/>
+          </div>
+        </div>
+        {/* background part */}
+        <div className="absolute h-[489px] w-full left-[-30px] z-0 max-md:hidden">
+            <div className="absolute w-[7px] h-[7px] rounded-full bg-red-300 top-0 left-40 z-0"></div>
+            <div className="absolute w-[67px] h-[67px] rounded-full bg-purple-800 top-10 left-5 z-0"></div>
+            <div className="absolute w-[60px] h-[60px] rounded-full bg-purple-800 bottom-28 right-0 z-0">
+              <span className="w-[28px] h-[28px] absolute bottom-3 left-[-6px]">&#128516;</span>
+            </div>
+            <div className="absolute w-[7px] h-[7px] rounded-full bg-beige-700 bottom-0 right-40 z-0"></div>
+        </div>
+        {/* background part end*/}        
+      </section>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+      {/* Why merry match section */}
+      <section className="flex justify-center items-center p-20 bg-utils-BG text-white gap-2">
+        <div className="flex-1 ">
+          <div className="flex flex-col gap-[40px]">
+            <p className="text-Headline2 text-purple-300 font-bold">
+              Why Merry Match?
+            </p>
+            <p className="text-Body1">
+              Merry Match is a new generation of online dating website for everyone   
+            </p>
+            <p className="text-Body2 text-gray-200">Whether you’re committed to dating, meeting new people, expanding your social network, meeting locals while traveling, or even just making a small chat with strangers. </p>
+            <p className="text-Body2 text-gray-200">This site allows you to make your own dating profile, discover new people, save favorite profiles, and let them know that you’re interested</p>
+          </div>
+        </div>
+        <div className="flex-1 relative h-[348px]">
+          {/* component lists */}
+          <div className="bg-purple-600 rounded-[29.2px] h-[99.46px] w-[237.23px] absolute left-[117.16px] z-20 shadow-md">
+            <p className="flex gap-1 items-center text-[21.9px] font-bold absolute top-7 left-7">
+              <span>
+                <Send/>
+              </span>
+              Fast
+            </p>
+            <div className="absolute top-0 right-1">
+             <SendPink/> 
+            </div>
+            
+          </div>
+          <div className="bg-purple-300 rounded-[29.2px] h-[109px] w-[398px] absolute top-[87px] left-[47px] z-10 shadow-md">
+            <p className="flex gap-1 items-center text-purple-600 text-[21.9px] font-bold absolute top-[35.27px] left-[270.89px]">
+              <span>
+                <ShieldDone/>
+              </span>
+              Secure
+            </p>
+            <div className="absolute bottom-0 left-[24px]">
+             <ShieldDonePink/> 
+            </div>
+          </div>
+          <div className="bg-purple-200 rounded-[29.2px] h-[145.99px] w-[328.48px] absolute top-[177.92px] left-[217.52px] z-20 shadow-md">
+            <p className="flex gap-1 items-center text-[21.9px] text-red-500 font-bold absolute top-[89.42px] left-[31.94px]">
+              <span>
+                <Star/>
+              </span>
+              Easy
+            </p>
+            <div className="absolute bottom-0 right-0">
+             <StarPink/> 
+            </div>
+          </div>
+          <div className="absolute top-[45px] left-[415px]">
+            <ExProfile2/>
+          </div>
+          <div className="absolute top-[251.83px] left-[87.96px]">
+              <ExProfile/>
+          </div>
+          <div className="h-[7px] w-[7px] rounded-full bg-purple-400 absolute top-[251.83px] left-[87.96px]"></div>
+          <div className="h-[9px] w-[9px] rounded-full bg-beige-800 absolute top-[26px] left-[507px]"></div>
+        </div>
+      </section>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
+      <section className="h-[622px] justify-center items-center p-20 bg-utils-BG text-white">
+        <div className="flex flex-col gap-[48px]">
+          <p className="text-Headline2 font-bold text-purple-300 text-center">
+            How to Merry
           </p>
-        </a>
+          <div className="flex gap-6 justify-center">
+              <div className="w-[262px] bg-purple-900 rounded-[40px] flex flex-col items-center p-[32px] text-center gap-[40px] cursor-pointer hover:bg-purple-700 hover:scale-105 transition-all">
+                <div className="w-[120px] h-[120px] rounded-full bg-purple-800 flex justify-start items-center">
+                    <span className="text-[50px] ml-6">
+                      &#128526;
+                    </span>
+                </div>
+                <div>
+                  <p className="text-Headline4">Upload your cool picture</p>
+                  <p className="text-Body2 text-gray-500 px-5 mt-[12px]">Lorem ipsum is a placeholder text</p>
+                </div>
+              </div>
+              <div className="w-[262px] bg-purple-900 rounded-[40px] flex flex-col items-center p-[32px] text-center gap-[40px] cursor-pointer hover:bg-purple-700 hover:scale-105 transition-all">
+                <div className="w-[120px] h-[120px] rounded-full bg-purple-800 flex justify-start items-center">
+                    <span className="text-[50px] ml-6">
+                      &#129321;
+                    </span>
+                </div>
+                <div>
+                  <p className="text-Headline4">Explore and find the one you like</p>
+                  <p className="text-Body2 text-gray-500 px-5 mt-[12px]">Lorem ipsum is a placeholder text</p>
+                </div>
+              </div>
+              <div className="w-[262px] bg-purple-900 rounded-[40px] flex flex-col items-center p-[32px] text-center gap-[40px] cursor-pointer hover:bg-purple-700 hover:scale-105 transition-all">
+                <div className="w-[120px] h-[120px] rounded-full bg-purple-800 flex justify-start items-center">
+                    <span className="text-[50px] ml-6">
+                      &#129395;
+                    </span>
+                </div>
+                <div>
+                  <p className="text-Headline4">Click ‘Merry’ for get to know!</p>
+                  <p className="text-Body2 text-gray-500 px-5 mt-[12px]">Lorem ipsum is a placeholder text</p>
+                </div>
+              </div>
+              <div className="w-[262px] bg-purple-900 rounded-[40px] flex flex-col items-center p-[32px] text-center gap-[40px] cursor-pointer hover:bg-purple-700 hover:scale-105 transition-all">
+                <div className="w-[120px] h-[120px] rounded-full bg-purple-800 flex justify-start items-center">
+                    <span className="text-[50px] ml-6">
+                      &#128536;
+                    </span>
+                </div>
+                <div>
+                  <p className="text-Headline4">Start chatting and relationship </p>
+                  <p className="text-Body2 text-gray-500 px-5 mt-[12px]">Lorem ipsum is a placeholder text</p>
+                </div>
+              </div>
+          </div>
+        </div>
+      </section>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+      <section>
+        
+      </section>
+    </>
   );
 }
