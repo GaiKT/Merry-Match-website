@@ -2,6 +2,7 @@ import React from 'react'
 import Logo from './Logo'
 import Button from './Button'
 import { MenuIcon } from 'lucide-react'
+import Link from 'next/link'
 
 export default function NavigationBar() {
   return (
@@ -20,7 +21,9 @@ export default function NavigationBar() {
           </a>
         </div>
         <div>
-          <Button label={'Login'} disable={false}/>
+          <Link href='/auth/login'>
+            <Button label={'Login'} disable={false}/>
+          </Link>
         </div>
       </div>
       <div className='md:hidden'>
