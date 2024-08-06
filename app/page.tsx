@@ -1,6 +1,7 @@
 //components import
 import Button from "@/components/utils/Button";
 import MessageBox from "@/components/utils/MessageBox";
+import Footer from "@/components/utils/Footer";
 
 //image & icon import
 import Girls from "@/asset/image/home/girls.svg"
@@ -14,6 +15,9 @@ import Star from '@/asset/icon-merrymatch/Star.svg'
 import StarPink from '@/asset/icon-merrymatch/StartPink.svg'
 import ExProfile from '@/asset/icon-merrymatch/Rectangle 1.svg'
 import ExProfile2 from '@/asset/icon-merrymatch/Rectangle 2.svg'
+import HeartPink1 from '@/asset/icon-merrymatch/heartPink1.svg'
+import HeartPink2 from '@/asset/icon-merrymatch/heartPink2.svg'
+import HeartPink3 from '@/asset/icon-merrymatch/heartPink3.svg'
 
 
 export default function Home() {
@@ -62,7 +66,7 @@ export default function Home() {
       </section>
 
       {/* Why merry match section */}
-      <section className="flex justify-center items-center p-20 bg-utils-BG text-white gap-2">
+      <section className="flex max-md:h-[850px] justify-center items-center md:p-20 bg-utils-BG text-white gap-2 max-md:flex-col max-md:p-5">
         <div className="flex-1 ">
           <div className="flex flex-col gap-[40px]">
             <p className="text-Headline2 text-purple-300 font-bold">
@@ -75,7 +79,7 @@ export default function Home() {
             <p className="text-Body2 text-gray-200">This site allows you to make your own dating profile, discover new people, save favorite profiles, and let them know that you’re interested</p>
           </div>
         </div>
-        <div className="flex-1 relative h-[348px]">
+        <div className="flex-1 relative h-[348px] w-full max-md:scale-75 max-md:translate-x-[-65px]">
           {/* component lists */}
           <div className="bg-purple-600 rounded-[29.2px] h-[99.46px] w-[237.23px] absolute left-[117.16px] z-20 shadow-md">
             <p className="flex gap-1 items-center text-[21.9px] font-bold absolute top-7 left-7">
@@ -122,12 +126,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="h-[622px] justify-center items-center p-20 bg-utils-BG text-white">
+      {/* How to merry section */}
+      <section className="md:h-[622px] justify-center items-center md:p-20 bg-utils-BG text-white max-md:py-20">
         <div className="flex flex-col gap-[48px]">
           <p className="text-Headline2 font-bold text-purple-300 text-center">
             How to Merry
           </p>
-          <div className="flex gap-6 justify-center">
+          <div className="flex gap-6 justify-center max-md:flex-col max-md:items-center">
               <div className="w-[262px] bg-purple-900 rounded-[40px] flex flex-col items-center p-[32px] text-center gap-[40px] cursor-pointer hover:bg-purple-700 hover:scale-105 transition-all">
                 <div className="w-[120px] h-[120px] rounded-full bg-purple-800 flex justify-start items-center">
                     <span className="text-[50px] ml-6">
@@ -176,9 +181,21 @@ export default function Home() {
         </div>
       </section>
 
-      <section>
-        
+      {/* let't find section */}
+      <section className="md:h-[570px] bg-utils-BG md:p-20 text-white flex w-full justify-center items-center">
+        <div className="md:h-[369px] md:rounded-[32px] bg-linear flex flex-col justify-center items-center gap-4 relative max-md:py-20">
+          <p className="text-Headline2 font-bold text-center w-2/3">
+            Let’s start finding and matching someone new
+          </p>
+          <Button label={'Start matching!'} disable={false}/>
+          <p className="absolute top-[73.23px] left-0"><HeartPink1/></p>
+          <p className="absolute top-[254.25px] right-0"><HeartPink2/></p>
+          <p className="absolute top-[216.12px] right-16"><HeartPink3/></p>
+        </div>
       </section>
+
+      {/* Footer */}
+      <Footer/>
     </>
   );
 }
