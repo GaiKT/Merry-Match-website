@@ -1,6 +1,7 @@
 "use client"
 
 import React from 'react';
+import Link from 'next/link';
 import ManWithLaptop from '@/asset/image/login/manwithnotebook.svg'; 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -41,7 +42,7 @@ export default function Login() {
     return (
         <main className='bg-background min-h-screen flex justify-center items-center w-full'>
             <div className='flex justify-between w-full max-w-5xl mx-auto max-md:flex-col'>
-                <div className='max-md: scale-75'>
+                <div className='max-md:scale-75'>
                     <ManWithLaptop/>
                 </div>
                 <div className='w-full md:w-5/12 flex flex-col justify-center text-start gap-9 p-4'>
@@ -96,7 +97,7 @@ export default function Login() {
                                 Submit
                             </button>
                             <FormDescription className='text-utils-black'>
-                                Don’t have an account? <a href="#" className='text-red-500 font-bold'>Register</a>
+                                Don’t have an account? <Link href='/auth/register' className='text-red-500 font-bold'>Register</Link>
                             </FormDescription>
                         </form>
                     </Form>
