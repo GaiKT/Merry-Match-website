@@ -2,6 +2,7 @@
 import Button from "@/components/utils/Button";
 import MessageBox from "@/components/utils/MessageBox";
 import Footer from "@/components/utils/Footer";
+import Link from "next/link";
 
 //image & icon import
 import Girls from "@/asset/image/home/girls.svg"
@@ -31,19 +32,6 @@ export default function Home() {
               <MessageBox message="Hi! Nice to meet you" position="start"/>
             </div>
         </div>
-        <div className="w-[358px] flex flex-col gap-[60px] justify-between items-center">
-          <div>
-            <p className="text-Headline1 font-extrabold text-center" >
-              Make the first ‘Merry’
-            </p>
-            <p className="text-Body1 font-bold text-center">
-              If you feel lonely, let’s start meeting new people in your area! Don’t forget to get Merry with us
-            </p>
-          </div>
-          <div>
-            <Button label={'Start matching!'} disable={false}/>
-          </div>
-        </div>
         <div className="md:absolute relative bottom-0 left-[160px] max-md:scale-90">
           <Girls2/>
           <div className="absolute top-14 left-[-50px]">
@@ -63,6 +51,19 @@ export default function Home() {
             <div className="absolute w-[7px] h-[7px] rounded-full bg-beige-700 bottom-0 right-40 z-0"></div>
         </div>
         {/* background part end*/}        
+        <div className="w-[358px] flex flex-col gap-[60px] justify-between items-center z-50">
+          <div>
+            <p className="text-Headline1 font-extrabold text-center" >
+              Make the first ‘Merry’
+            </p>
+            <p className="text-Body1 font-bold text-center">
+              If you feel lonely, let’s start meeting new people in your area! Don’t forget to get Merry with us
+            </p>
+          </div>
+          <Link href={'/match'}>
+            <Button label={'Start matching!'} disable={false}/>
+          </Link>
+        </div>
       </section>
 
       {/* Why merry match section */}
