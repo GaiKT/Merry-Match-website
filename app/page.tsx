@@ -8,7 +8,7 @@ import Link from "next/link";
 import Girls from "@/asset/image/home/girls.svg"
 import Girls2 from "@/asset/image/home/girls2.svg" 
 import HeartIcon from '@/asset/icon-merrymatch/heartwhite.svg'
-import Send from '@/asset/icon-merrymatch/send.svg'
+import Send from '@/asset/icon-merrymatch/Send.svg'
 import SendPink from '@/asset/icon-merrymatch/SendPink.svg'
 import ShieldDone from '@/asset/icon-merrymatch/ShieldDone.svg'
 import ShieldDonePink from '@/asset/icon-merrymatch/ShiedDonePink.svg'
