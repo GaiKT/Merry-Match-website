@@ -51,7 +51,7 @@ export default function Home() {
             <div className="absolute w-[7px] h-[7px] rounded-full bg-beige-700 bottom-0 right-40 z-0"></div>
         </div>
         {/* background part end*/}        
-        <div className="w-[358px] flex flex-col gap-[60px] justify-between items-center z-50">
+        <div className="w-[358px] flex flex-col gap-[60px] justify-between items-center z-40">
           <div>
             <p className="text-Headline1 font-extrabold text-center" >
               Make the first ‘Merry’

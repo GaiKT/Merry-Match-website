@@ -3,6 +3,7 @@ import HeartScan from '@/asset/icon-merrymatch/heartScan.svg'
 import MerryMatch from '@/asset/icon-merrymatch/merryMatch.svg'
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area"
 import Image from "next/image"
+import Link from 'next/link'
 
 export interface Artwork {
   artist: string
@@ -78,25 +79,27 @@ export default function SideBar() {
                   <ScrollArea className="w-full h-80">
                     <div className="flex flex-col w-full gap-4">
                       {works.map((artwork) => (
-                        <figure key={artwork.artist} className="shrink-0">
-                          <div className="overflow-hidden rounded-md py-4 px-3 flex gap-4">
-                            <div className='w-[60px] h-[60px]'>
-                              <Image
-                                src={artwork.art}
-                                alt={`Photo by ${artwork.artist}`}
-                                className="object-cover w-[60px] h-[60px] rounded-full"
-                                width={60}
-                                height={60}
-                              />
+                        <Link href={'/livechat'}>
+                          <figure key={artwork.artist} className="shrink-0">
+                            <div className="overflow-hidden rounded-md py-4 px-3 flex gap-4">
+                              <div className='w-[60px] h-[60px]'>
+                                <Image
+                                  src={artwork.art}
+                                  alt={`Photo by ${artwork.artist}`}
+                                  className="object-cover w-[60px] h-[60px] rounded-full"
+                                  width={60}
+                                  height={60}
+                                />
+                              </div>
+                              <p className='flex flex-col justify-center'>
+                                <span className='text-Body1 text-gray-900'>{artwork.artist}</span>
+                                <span className='text-Body3 text-gray-700'>
+                                  You know nothing Jon Snow
+                                </span>
+                              </p>
                             </div>
-                            <p className='flex flex-col justify-center'>
-                              <span className='text-Body1 text-gray-900'>{artwork.artist}</span>
-                              <span className='text-Body3 text-gray-700'>
-                                You know nothing Jon Snow
-                              </span>
-                            </p>
-                          </div>
-                        </figure>
+                          </figure>
+                        </Link>
                       ))}
                     </div>
                     <ScrollBar orientation="horizontal" />

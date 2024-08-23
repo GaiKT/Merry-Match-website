@@ -129,6 +129,7 @@ const config = {
       },
       backgroundImage: {
         'linear': 'linear-gradient(to right, #742138, #A878BF)',
+        'linear0': 'linear-gradient(to bottom, #07094100, #390741)',
       },
       borderRadius: {
         lg: "var(--radius)",
