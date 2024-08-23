@@ -18,10 +18,7 @@ export default function LiveChat() {
               Now you and Daeny are Merry Match! You can messege something nice and make a good conversation. Happy Merry!
             </h1>
           </div>
-
-          <div>
-            
-          </div>
+          <div></div>
         </div>
       </div>
 
@@ -31,10 +28,10 @@ export default function LiveChat() {
             <Label className='text-utils-BG h-[48px] w-[48px] bg-utils-white rounded-full pt-4'>images
               <Input type="file" className='hidden'/>
             </Label>
-            <Input type="text" placeholder="Messege here..." className='text-gray-500 font-bold text-Body2 bg-utils-BG border-none' />
+            <Input type="text" placeholder="Messege here..." className='text-gray-500 font-bold text-Body2 bg-utils-BG border-none'/>
           </div>
           <div className='flex-1 flex w-full justify-end items-center'>
-              <button className='text-white rotate-45 p-3 bg-red-500 rounded-full'>
+              <button className='text-white rotate-45 p-3 bg-red-500 rounded-full hover:scale-105 transition-all hover:shadow-md'>
                 <Send/>
               </button>
           </div>
